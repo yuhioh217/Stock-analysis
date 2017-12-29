@@ -4,14 +4,27 @@ var path = require('path');
 var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var webpackTargetElectronRenderer = require('webpack-target-electron-renderer');
+var loaderWithQuery = require('webpack-query-creator');
+var fs = require('fs');
+var nodeExternals = require('webpack-node-externals');
+
 const museUiThemePath = path.join(
   __dirname,
   'node_modules',
   'muse-ui'
 )
 
+var nodeModules = {};
+fs.readdirSync('node_modules')
+.filter(function(x) {
+  return ['.bin'].indexOf(x) === -1;
+})
+.forEach(function(mod) {
+  nodeModules[mod] = 'commonjs ' + mod;
+});
+
 var options ={
-  //name: 'Browser',
+  target:'node',
   entry: [
     './src/main.js'
   ],
@@ -35,19 +48,19 @@ var options ={
 				{ test: /\.json$/, loader: 'json-loader' },
 				{
 					test: /\.vue?$/,
-					loader: 'vue-loader',
-          //loader: 'babel-loader?presets[]=es2015&presets[]=react',
-					exclude: /(node_modules|bower_components|vue\/src|vue-router)/,
-					query: {
+					loaders : 'vue-loader' ,//['vue-loader','babel-loader'],
+					exclude: /(node_modules|bower_components|vue\/src|vue-router|vendor)/,
+          query: {
             presets: [ 'react',
               'es2015',  // ES6 features
               'stage-0', // for React.Component
               'stage-3', // Stable ES7 features(Async/Await)
             ]
 
-					}
+          }
 				},
-        { test: /\.js$/,
+        {
+          test: /.js$/,
           loader: 'babel-loader',
           exclude: /node_modules/
         },
@@ -61,21 +74,19 @@ var options ={
 				{ test: /\.jpg$/,  loader: "url-loader?limit=1000" },
 				{ test: /\.gif$/,  loader: "url-loader?limit=1000" },
 				{ test: /\.woff$/, loader: "url-loader?limit=1000" }
-			],
-			noParse: [
-				/moment-with-locales/
 			]
   },
-  externals: {
-    jQuery: true
-  },
+  externals: [
+    //nodeExternals(),
+    {jQuery: true}
+  ],
   resolve: {
     alias: {
       Source: __dirname + '/src',
       'vue$': 'vue/dist/vue.common.js'
-    }
-  },
-  debug: true
+    },
+    extensions: ['', '.webpack.js', '.web.js', '.js','vue']
+  }
 };
 
 options.target = webpackTargetElectronRenderer(options);

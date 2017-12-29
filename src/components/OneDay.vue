@@ -1,7 +1,7 @@
 <template>
   <div>
     <mu-list :value="value" @change="handleChange">
-      <mu-list-item  :open="open" :value="1" title="連續五天量" inset toggleNested>
+      <mu-list-item  :open="open" :value="1" title="最近一天外資" inset toggleNested>
         <mu-avatar src="/assets/externals/images/red.jpg" slot="leftAvatar"/>
           <template v-for="(item,index) in data.label">
             <mu-list-item @click="openMenu(index)" v-bind:title="item" slot="nested" v-bind:value="indexChange(index)" inset>
@@ -14,16 +14,15 @@
               <template v-else>
                 <mu-avatar src="/assets/externals/images/warning.jpg" slot="leftAvatar"/>
               </template>
+
               <template>
                 <mu-tbody>
                   <mu-tr>
-                    <mu-td>五日買超張數 : {{data.value[index]}}</mu-td>
-                  </mu-tr>
-                  <mu-tr>
-                    <mu-td>今日買超張數 : {{data.today_buy[index]}}</mu-td>
+                    <mu-td>今日買超張數 : {{data.value[index]}}</mu-td>
                   </mu-tr>
                 </mu-tbody>
               </template>
+              
             </mu-list-item>
           </template>
       </mu-list-item>
@@ -54,13 +53,13 @@
 //var socket = io.connect('http://10.1.1.10:3000');
 
 export default {
-  name:'five-day',
+  name:'one-day',
   data () {
     const menus = []
     for (let i = 0; i < 30; i++) {
       menus.push(i + 1)
     }
-    errors: [];
+
     return {
       open: false,
       value: 1,
@@ -78,28 +77,24 @@ export default {
   },
   created : function(){
     this.getData();
-    this.open = true;
   },
 
   mounted : function (){
 
   },
-  
+
+  updated : function(){
+
+  },
   methods: {
+
     getData(){
-      axios.get('http://10.1.1.10:3000/apis/tab/home/5/')
+      axios.get('http://10.1.1.10:3000/apis/tab/home/1/')
       .then(response => {
         this.data = response.data.data;
       })
     },
 
-    stringToInt() {
-      var valueArr = [];
-      for(var i =0; i<(this.data.value).length;i++){
-         valueArr.push(parseInt(this.data.value[i]));
-      }
-      this.data.value = valueArr;
-    },
     handleChange (val) {
       this.value = val;
     },
@@ -135,10 +130,11 @@ export default {
       for(var i =0; i< (this.data.forSellCount[index]).length ;i++){
         (this.forSellCount).push(this.data.forSellCount[index][i]);
       }
-      //console.log(this.forBuy);
+      console.log(this.forBuy);
       this.dialog = true;
     },
     closeMenu () {
+
       this.forBuy = [];
       this.forSell= [];
       this.dialog = false;
