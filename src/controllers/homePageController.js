@@ -55,12 +55,10 @@ exports.tababout = (req, res) =>
 
 exports.table1 = async(ctx, next) => {
 	var analyze="";
-	console.log('Use Restful API' + ctx.params.id);
-	if(ctx.params.id==1){
-		analyze = await analyze_info.home_table1()
-	}else{
-		analyze = await analyze_info.home_table1()
-	}
+	console.log('Use Restful API' + ctx.params.date);
+	var date_param = ctx.params.date;
+	analyze = await analyze_info.home_table1(date_param);
+
 	var date = analyze[0].TimeStamp;
 	var rankByPercent = analyze[0].rankByPercent;
 	var rankByDiff = analyze[0].rankByDiff;

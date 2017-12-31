@@ -89,7 +89,9 @@ export default {
   methods: {
 
     getData(){
-      axios.get('http://10.1.1.10:3000/apis/tab/home/1/')
+      const dateTime  = require("date-time");
+      
+      axios.get('http://10.1.1.10:3000/apis/tab/home/'+ dateTime() +'/')
       .then(response => {
         this.data = response.data.data;
       })

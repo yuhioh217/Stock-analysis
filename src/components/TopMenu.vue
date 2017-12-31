@@ -29,7 +29,7 @@
 </template>
 
 <script>
-	import TableOne from './TableOne.vue'
+	import TableOne from './page_one/TableOne.vue'
 	export default {
 		name:'top-menu',
 		data(){

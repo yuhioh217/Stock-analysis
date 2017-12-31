@@ -1,5 +1,6 @@
 <template>
 	<div class="table_content">
+		<h1>{{data.date}} Trading Short Filter</h1>
 		<p class="tradingshort_title">融券大於3000張, 資券比 > 20%, 資券比 < 40% (有機會尬空股)</p>
 		<div class="table1">
 			<md-table>
@@ -68,6 +69,7 @@
 		data(){
 			return {
 				data               : {},
+				dateTime           : "",
 				link_rankByPercent : [],
 				link_rankByDiff    : []
 			}
@@ -77,11 +79,11 @@
 		},
 		methods : {
 			getData(){
-
-		      axios.get('http://localhost:3000/apis/home/table1/1/') //restful api to get the tradingshort database.
+			  const dateTime  = require("date-time");
+		      axios.get('http://localhost:3000/apis/home/tradingShort/' + dateTime() +'/') //restful api to get the tradingshort database.
 		      .then(response => {
 		        this.data = response.data.data;
-		        
+		        this.dateTime = this.data.date;
 		        for(var i=0;i<(this.data.rankByPercent).length;i++){  //rankByPercent
 		        	(this.link_rankByPercent).push("https://statementdog.com/analysis/tpe/" + (this.data.rankByPercent)[i].id);
 		        } // push the stock info link string to array.
@@ -112,4 +114,6 @@
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+
+h1 { color: #000000; font-family: 'Raleway',sans-serif; font-size: 35px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; background-color: #DDDDDD}
 </style>

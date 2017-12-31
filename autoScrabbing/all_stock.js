@@ -29,9 +29,9 @@ const sellAndBuyPercent = async() => {
 	var centerData = fs.readFileSync("./stock_info/center.txt",'utf8');
 	var cabinetData = fs.readFileSync("./stock_info/cabinet.txt",'utf8');
 
-	var centerArr = S(centerData).splitLeft('\r\n');
-	var cabinetArr= S(cabinetData).splitLeft('\r\n');
-
+	var centerArr = S(centerData).splitLeft('\n');
+	var cabinetArr= S(cabinetData).splitLeft('\n');
+	console.log(centerArr);
 	var centerRankOne = [];
 	var centerRankTwo = [];
 	var body = "";
@@ -42,7 +42,6 @@ const sellAndBuyPercent = async() => {
 		arrNum = arrNum + 1;
 		console.log("=====" + stockID + "=====");
 		body = await get_webpage(stockHTML + stockID);
-		//console.log(body);
 		var bodyBig5 = iconv.decode(body,"big5");
 		var a = cheerio.load('<html><head></head><body>' + S(bodyBig5).substr(18,S(bodyBig5).length-25).s + '</body></html>');
 
@@ -56,7 +55,6 @@ const sellAndBuyPercent = async() => {
 
 		var trading_shortToday = parseFloat(S(a(percentData[28]).text()).replaceAll(',','').s);
 		var trading_shortYester= parseFloat(S(a(percentData[41]).text()).replaceAll(',','').s);
-		//console.log(trading_shortToday + " " + trading_shortYester);
 		var trading_shortDiff  = trading_shortToday - trading_shortYester;
 		var dif = (one*100-two*100)/100;
 
@@ -107,15 +105,16 @@ const sellAndBuyPercent = async() => {
 		console.log(centerRankTwo);
 
 		if(arrNum == centerArr.length){
-			var url = 'mongodb://localhost:27017/tradingshort';
+			var url = 'mongodb://localhost:27017/stock';
 			var mongodb = new mongo(url);
 
 			await mongodb.insert({
 				TimeStamp     : "20171229",
 				rankByPercent : centerRankOne,
 				rankByDiff    : centerRankTwo
-			},"table1");
+			},"tradingShort");
 		}
+
 	});
 	/*var url = 'mongodb://localhost:27017/tradingshort';
 	var mongodb = new mongo(url);
