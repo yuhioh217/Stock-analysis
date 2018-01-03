@@ -23,13 +23,16 @@
 		  </div>
 		</div>
 		<div class="content">
-			<table-one></table-one>
+			<table-two/>
+			<table-one/>
+			
 		</div>
 	</div>
 </template>
 
 <script>
 	import TableOne from './page_one/TableOne.vue'
+	import TableTwo from './page_one/TableTwo.vue'
 	export default {
 		name:'top-menu',
 		data(){
@@ -38,7 +41,8 @@
 			}
 		},
 		components : {
-			TableOne
+			TableOne,
+			TableTwo
 		}
 	}
 
