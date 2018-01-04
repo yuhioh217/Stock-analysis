@@ -11,10 +11,11 @@ class MongoController():
 		self.collection = self.db[options['collection']]
 
 		
-	def insertData(data):
+	def insertData(self, data):
 		try:
-			#post_id = (self.collection).insert_one(data).inserted_id
 			print data
+			post_id = (self.collection).insert_one(data).inserted_id
+			
 		except Exception as err:
 			print err
 

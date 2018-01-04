@@ -22,7 +22,7 @@ class Crawler():
 				print err
 				data = []
 			count = len(data['data'])	
-			for index in range(0, count-1):
+			for index in range(0, count):
 				self.dateArr.append(data['data'][index][0])
 				self.dataArr.append(data['data'][index][4])
 				

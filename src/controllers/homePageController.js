@@ -43,19 +43,9 @@ exports.tabhome = async(ctx, next) =>
 	};
 }
 
-exports.tabfavorite = (req, res) =>
-{
-
-}
-
-exports.tababout = (req, res) =>
-{
-
-}
-
 exports.table1 = async(ctx, next) => {
 	var analyze="";
-	console.log('Use Restful API' + ctx.params.date);
+	console.log('Use Restful API : table1 params:' + ctx.params.date);
 	var date_param = ctx.params.date;
 	analyze = await analyze_info.home_table1(date_param);
 
@@ -72,6 +62,18 @@ exports.table1 = async(ctx, next) => {
 			"rankByPercent" : rankByPercent,
 			"rankByDiff" : rankByDiff			
 		}
+	};
+}
+
+exports.market = async(ctx, next) => {
+	console.log('Use Restful API : ' + 'market');
+	var market_data = "";
+	market_data = await analyze_info.market_all();
+	console.log(market_data);
+	ctx.response.type = 'application/json';
+	ctx.response.body = {
+		code: 200,
+		message: ''
 	};
 }
 

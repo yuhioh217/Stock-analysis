@@ -3,6 +3,7 @@ sys.path.append('./Crawler.py')
 sys.path.append('./MongoController.py')
 import Crawler
 import MongoController
+import time
 
 if __name__ == '__main__':
 	
@@ -25,5 +26,13 @@ if __name__ == '__main__':
 			data = Crawler.Crawler(date_str)
 			dateArr = data.getData()[0]
 			dataArr = data.getData()[1]
-			print dateArr
+			
+			for index in range(0,len(dateArr)):
+				tempDate = dateArr[index]
+				tempData = dataArr[index]
+				mongo.insertData({
+					'date' : tempDate,
+					'data' : tempData
+				})
+			time.sleep(5)	
 			#print 'Prepare to insert data to mongoDB'
