@@ -8,7 +8,10 @@ from datetime import date
 class Crawler():
 		def __init__(self, dateStr):
 			self.dateArr = []
-			self.dataArr = []
+			self.openArr = []
+			self.highArr = []
+			self.lowArr = []
+			self.endArr = []
 			
 			base_url = 'http://www.twse.com.tw/indicesReport/MI_5MINS_HIST?'
 			self.query_url = '{}response=json&date={}'.format(base_url, dateStr)
@@ -22,8 +25,14 @@ class Crawler():
 				print err
 				data = []
 			count = len(data['data'])	
+			print count
 			for index in range(0, count):
 				self.dateArr.append(data['data'][index][0])
-				self.dataArr.append(data['data'][index][4])
-				
-			return [self.dateArr, self.dataArr]
+				self.openArr.append(data['data'][index][1])
+				self.highArr.append(data['data'][index][2])
+				self.lowArr.append(data['data'][index][3])
+				self.endArr.append(data['data'][index][4])
+
+		def returnData(self):
+			return [self.dateArr, self.openArr, self.highArr, self.lowArr, self.endArr]
+		

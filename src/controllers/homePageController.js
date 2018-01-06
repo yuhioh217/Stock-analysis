@@ -65,15 +65,30 @@ exports.table1 = async(ctx, next) => {
 	};
 }
 
-exports.market = async(ctx, next) => {
-	console.log('Use Restful API : ' + 'market');
+exports.market_all = async(ctx, next) => {
+	console.log('Use Restful API : ' + 'market_all');
 	var market_data = "";
 	market_data = await analyze_info.market_all();
-	console.log(market_data);
+	//console.log(market_data);
 	ctx.response.type = 'application/json';
 	ctx.response.body = {
 		code: 200,
-		message: ''
+		message: '',
+		data: market_data
+	};
+}
+
+exports.market_date = async(ctx, next) => {
+	console.log('Use Restful API : ' + 'market_date');
+	var date_param = ctx.params.date;
+	var market_data = "";
+	market_data = await analyze_info.market(date_param);
+	//console.log(market_data);
+	ctx.response.type = 'application/json';
+	ctx.response.body = {
+		code: 200,
+		message: '',
+		data: market_data
 	};
 }
 

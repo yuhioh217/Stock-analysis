@@ -13,7 +13,6 @@ class MongoController():
 		
 	def insertData(self, data):
 		try:
-			print data
 			post_id = (self.collection).insert_one(data).inserted_id
 			
 		except Exception as err:

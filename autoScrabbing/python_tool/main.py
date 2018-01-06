@@ -23,16 +23,22 @@ if __name__ == '__main__':
 				month_str = str(month)
 			date_str = year_str + month_str + '01'
 			print date_str
-			data = Crawler.Crawler(date_str)
-			dateArr = data.getData()[0]
-			dataArr = data.getData()[1]
-			
-			for index in range(0,len(dateArr)):
-				tempDate = dateArr[index]
-				tempData = dataArr[index]
+			dataCrawler = Crawler.Crawler(date_str)
+			dateGet = dataCrawler.getData()
+			data = dataCrawler.returnData()
+
+			for index in range(0,len(data[0])):
+				tempDate = data[0][index]
+				tempOpen = data[1][index]
+				tempHigh = data[2][index]
+				tempLow  = data[3][index]
+				tempEnd  = data[4][index]
 				mongo.insertData({
 					'date' : tempDate,
-					'data' : tempData
+					'open' : tempOpen,
+					'high' : tempHigh,
+					'low'  : tempLow,
+					'end'  : tempEnd
 				})
 			time.sleep(5)	
 			#print 'Prepare to insert data to mongoDB'
