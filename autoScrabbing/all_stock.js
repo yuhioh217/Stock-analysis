@@ -5,6 +5,7 @@ const iconv   = require("iconv-lite");
 const async   = require("async");
 const request = require("request");
 const mongo   = require("./mongo_test.js");
+const dateTime= require("date-time");
 
 
 const get_webpage = (url) => { //Get HTML information
@@ -107,9 +108,9 @@ const sellAndBuyPercent = async() => {
 		if(arrNum == centerArr.length){
 			var url = 'mongodb://localhost:27017/stock';
 			var mongodb = new mongo(url);
-
+			var date = S(S(dateTime()).splitLeft(" ")[0]).replaceAll("-","").s;
 			await mongodb.insert({
-				TimeStamp     : "20180105",
+				TimeStamp     : date,
 				rankByPercent : centerRankOne,
 				rankByDiff    : centerRankTwo
 			},"tradingShort");

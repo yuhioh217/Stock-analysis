@@ -14,8 +14,8 @@ if __name__ == '__main__':
 	}
 	mongo = MongoController.MongoController(options);
 
-	for year in range(2007,2018):
-		for month in range(1,13):
+	for year in range(2018,2019):
+		for month in range(1,2):
 			year_str = str(year)
 			if month < 10:
 				month_str = '0'+ str(month)
