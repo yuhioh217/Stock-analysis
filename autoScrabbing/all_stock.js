@@ -29,8 +29,8 @@ const sellAndBuyPercent = async() => {
 	var centerData = fs.readFileSync("./stock_info/center.txt",'utf8');
 	var cabinetData = fs.readFileSync("./stock_info/cabinet.txt",'utf8');
 
-	var centerArr = S(centerData).splitLeft('\n');
-	var cabinetArr= S(cabinetData).splitLeft('\n');
+	var centerArr = S(centerData).splitLeft('\r\n');
+	var cabinetArr= S(cabinetData).splitLeft('\r\n');
 	console.log(centerArr);
 	var centerRankOne = [];
 	var centerRankTwo = [];
@@ -109,7 +109,7 @@ const sellAndBuyPercent = async() => {
 			var mongodb = new mongo(url);
 
 			await mongodb.insert({
-				TimeStamp     : "20171229",
+				TimeStamp     : "20180105",
 				rankByPercent : centerRankOne,
 				rankByDiff    : centerRankTwo
 			},"tradingShort");

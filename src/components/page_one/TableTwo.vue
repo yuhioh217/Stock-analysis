@@ -23,12 +23,13 @@
 			}
 		},
 		created () {
-			
+			this.$Progress.start();
+			this.getData();
 		},
 
 		mounted () {
-			this.$Progress.start();
-			this.getData();
+			
+			
 			this.renderChart({
 			  labels: this.dateArr,
 			  datasets: [
@@ -45,7 +46,7 @@
 		watch: {
 		    data: function () {
 		      console.log("Reload data");
-		      //this._chart.destroy();
+		     this.$data._chart.destroy();
 		      this.renderChart({
 				  labels: this.dateArr,
 				  datasets: [
@@ -67,7 +68,7 @@
 					(response) => {
 						this.data = response.data.data;
 						//console.log('all have ' + (this.data).length + ' data');
-						for(var i=0; i < (this.data).length;i++){
+						for(var i=((this.data).length)-100; i < (this.data).length;i++){
 							this.dateArr.push((this.data)[i].date);
 							this.endArr.push(S(S((this.data)[i].end).replaceAll(',','').s).toFloat());
 							//console.log((this.data)[i]);

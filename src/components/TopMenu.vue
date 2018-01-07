@@ -23,9 +23,9 @@
 		  </div>
 		</div>
 		<div class="content">
+			<table-scrol/>
 			<table-two/>
 			<table-one/>
-			
 		</div>
 	</div>
 </template>
@@ -33,6 +33,7 @@
 <script>
 	import TableOne from './page_one/TableOne.vue'
 	import TableTwo from './page_one/TableTwo.vue'
+	import ScrollableLineChart from './page_one/ScrollableLineChart.vue'
 	export default {
 		name:'top-menu',
 		data(){
@@ -41,8 +42,10 @@
 			}
 		},
 		components : {
+			ScrollableLineChart,
 			TableOne,
 			TableTwo
+			
 		}
 	}
 
