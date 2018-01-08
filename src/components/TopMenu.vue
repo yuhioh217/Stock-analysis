@@ -25,6 +25,8 @@
 		<div class="content">
 			<chart-one/>
 			<table-one/>
+			<pie-chart/>
+			<pie-chart/>
 		</div>
 	</div>
 </template>
@@ -32,6 +34,7 @@
 <script>
 	import TableOne from './page_one/TableOne.vue'
 	import ChartOne from './page_one/ChartOne.vue'
+	import PieChart from './page_one/PieChart.vue'
 	export default {
 		name:'top-menu',
 		data(){
@@ -41,7 +44,8 @@
 		},
 		components : {
 			ChartOne,
-			TableOne
+			TableOne,
+			PieChart
 		}
 	}
 

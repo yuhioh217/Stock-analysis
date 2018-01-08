@@ -102,7 +102,7 @@
 
 			    for (var i = 0; i < (this.endArr).length; i++) {
 			        var newDate = new Date();
-			        console.log('dateArr : '  + this.dateArr[i]);
+			        //console.log('dateArr : '  + this.dateArr[i]);
 			        var year = S(S(this.dateArr[i]).splitLeft('/')[0]).toInt();
 			        var month = S(S(this.dateArr[i]).splitLeft('/')[1]).toInt();
 			        var day = S(S(this.dateArr[i]).splitLeft('/')[2]).toInt();
