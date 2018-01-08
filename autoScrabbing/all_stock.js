@@ -73,7 +73,7 @@ const sellAndBuyPercent = async() => {
 		var investment_Trust  = parseFloat(S(b(buyData[22]).text()).replaceAll(',','').s);
 		var dealer            = parseFloat(S(b(buyData[23]).text()).replaceAll(',','').s);
 
-		var obj   = {
+		var obj = {
 			"id" :stockID,
 			"one":one,
 			"two":two,
