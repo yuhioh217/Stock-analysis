@@ -1,13 +1,13 @@
 <template>
 	<div>
 		<div class="ui secondary  menu">
-		  <a class="item">
+		  <a class="item" style="color:#fff">
 		    Today Detail
 		  </a>
-		  <a class="item">
+		  <a class="item" style="color:#fff">
 		    Data Analysis
 		  </a>
-		  <a class="item">
+		  <a class="item" style="color:#fff">
 		    About
 		  </a>
 		  <div class="right menu">
@@ -25,8 +25,13 @@
 		<div class="content">
 			<chart-one/>
 			<table-one/>
-			<pie-chart/>
-			<pie-chart/>
+	  
+			<pie-chart stockdown="YX" stockup="DD" downval=11 upval=4></pie-chart>
+			<pie-chartcement stockdown="XX" stockup="DD" downval=10 upval=3></pie-chartcement>
+			<pie-chartfood stockdown="XX" stockup="DD" downval=10 upval=3></pie-chartfood>
+
+			
+			
 		</div>
 	</div>
 </template>
@@ -35,6 +40,9 @@
 	import TableOne from './page_one/TableOne.vue'
 	import ChartOne from './page_one/ChartOne.vue'
 	import PieChart from './page_one/PieChart.vue'
+	import PieChartcement from './page_one/PieChartcement.vue'
+	import PieChartfood from './page_one/PieChartfood.vue'
+
 	export default {
 		name:'top-menu',
 		data(){
@@ -45,7 +53,9 @@
 		components : {
 			ChartOne,
 			TableOne,
-			PieChart
+			PieChart,
+			PieChartcement,
+			PieChartfood
 		}
 	}
 
@@ -53,6 +63,6 @@
 
 <style>
 	.content {
-		margin: 10px 20px 10px 20px;
+		
 	}
 </style>

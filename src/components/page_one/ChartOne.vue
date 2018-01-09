@@ -43,7 +43,7 @@
 						var chartData = this.generateChartData();
 						var chart = AmCharts.makeChart("chartdiv", {
 						"type": "serial",
-						"theme": "light",
+						"theme": "black",
 						"marginRight": 80,
 						"autoMarginOffset": 20,
 						"marginTop": 7,
@@ -84,7 +84,7 @@
 						    "minorGridEnabled": true
 						},
 						"export": {
-						    "enabled": true
+						    "enabled": false
 						}
 					});
 					chart.addListener("rendered", this.zoomChart(chart,chartData));

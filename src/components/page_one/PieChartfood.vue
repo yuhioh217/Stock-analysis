@@ -1,12 +1,12 @@
 <template>
-		<div id="piechart"></div>
+	<div id="piechartfood"></div>
 </template>
 
 <script>
 
 	const S = require("string");
 	export default {
-		name:'pie-chart',
+		name:'pie-chartfood',
 		props: ['stockup','stockdown','upval','downval'],
 		data () {
 			return {
@@ -20,7 +20,7 @@
 		},
 
 		mounted () {
-			var chart = AmCharts.makeChart( "piechart", {
+			var chart = AmCharts.makeChart( "piechartfood", {
 				"type": "pie",
 				"theme": "black",
 				"dataProvider": [{
@@ -64,7 +64,7 @@
 </script>
 
 <style>
-#piechart {
+#piechartfood {
 	margin-top:20px;
 	margin-right: 10px;
 	margin-left: 10px;
