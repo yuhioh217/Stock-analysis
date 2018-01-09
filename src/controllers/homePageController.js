@@ -92,4 +92,23 @@ exports.market_date = async(ctx, next) => {
 	};
 }
 
+exports.industry = async(ctx, next) => {
+
+	var industry_data = ''
+	console.log(ctx.params.category);
+	if(ctx.params.category === 'cement'){
+		console.log("Test");
+		industry_data = await analyze_info.industry_cement()
+	}else{
+		industry_data = await analyze_info.industry_cement()
+	}
+
+	ctx.response.type = 'application/json';
+	ctx.response.body = {
+		code: 200,
+		message: '',
+		data: industry_data
+	};
+}
+
 
