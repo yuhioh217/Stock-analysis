@@ -1,7 +1,7 @@
 <template>
 	<div class="table_content">
 		<h1>{{data.date}} Trading Short Filter</h1>
-		<p class="tradingshort_title">融券大於3000張, 資券比 > 20%, 資券比 < 40% (有機會尬空股)</p>
+		<p class="tradingshort_title">融券大於3000張, 券資比 > 20%, 券資比 < 40% (有機會尬空股)</p>
 		<div class="table1">
 			<md-table>
 			  <md-table-header>
@@ -29,7 +29,7 @@
 			  </md-table-body>
 			</md-table>
 		</div>
-		<p class="tradingshort_title">融券大於3000張, 資券比較昨天增加比例高於 2% (有機會尬空股)</p>
+		<p class="tradingshort_title">融券大於3000張, 券資比較昨天增加比例高於 2% (有機會尬空股)</p>
 		<div class="table2">
 			<md-table>
 			  <md-table-header>

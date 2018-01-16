@@ -7,6 +7,8 @@ import Crawler
 import MongoController
 import Industry
 import time
+import industry_stockinfo
+import stockinfo_update
 
 if __name__ == '__main__':
 
@@ -48,13 +50,26 @@ if __name__ == '__main__':
 			time.sleep(5)	
 			#print 'Prepare to insert data to mongoDB'
 	'''
-	#產業 分類
-	options={
-		'url':'mongodb://localhost:27017/',
-		'db':'industry',
-		'collection':'cement',
+	'''
+	option = {
+			'url':'mongodb://localhost:27017/',
+			'db':'industry',
+			'collection':'all'
 	}
-	mongo = MongoController.MongoController(options);
+
+	stockData = industry_stockinfo.stock(option)
+	stockData.fetchData()
+	'''
+	u_Stock = stockinfo_update.StockInfo()
+	u_Stock.read_file('../stock_info/center.txt')
+	u_Stock.get_allinfo()
+	u_Stock.read_file('../stock_info/cabinet.txt')
+	u_Stock.get_allinfo()
+
+
+
+
+	'''
 	cement_id = [1101,1102,1103,1104,1108,1109,1110]	#水泥
 	v = Industry.Industry()
 	for id in cement_id:
@@ -88,4 +103,5 @@ if __name__ == '__main__':
 			'UDVal': tempUDVal,
 			'UDRate':tempUDRate
 		})
+	'''
 	
