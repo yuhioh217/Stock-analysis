@@ -1,117 +1,23 @@
-[INFO  - 2018-01-24T16:29:54.882Z] GhostDriver - Main - running on port 52513
-[INFO  - 2018-01-24T16:29:56.432Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2018-01-24T16:29:56.432Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.customHeaders:  - {}
-[INFO  - 2018-01-24T16:29:56.432Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2018-01-24T16:29:56.432Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d041daa0-0123-11e8-b1e4-39a3544e2304
-[ERROR - 2018-01-24T16:29:59.578Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
+[INFO  - 2018-01-30T15:47:26.039Z] GhostDriver - Main - running on port 54662
+[INFO  - 2018-01-30T15:47:27.517Z] Session [df76ca70-05d4-11e8-912e-fb9f5a401985] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-01-30T15:47:27.517Z] Session [df76ca70-05d4-11e8-912e-fb9f5a401985] - page.customHeaders:  - {}
+[INFO  - 2018-01-30T15:47:27.517Z] Session [df76ca70-05d4-11e8-912e-fb9f5a401985] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-01-30T15:47:27.517Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: df76ca70-05d4-11e8-912e-fb9f5a401985
+[ERROR - 2018-01-30T15:47:31.308Z] Session [df76ca70-05d4-11e8-912e-fb9f5a401985] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:29:59.578Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - stack:
+[ERROR - 2018-01-30T15:47:31.308Z] Session [df76ca70-05d4-11e8-912e-fb9f5a401985] - page.onError - stack:
   changeSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:64)
   genSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:53)
   genSelect (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:27)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:30:00.042Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
+[ERROR - 2018-01-30T15:47:31.966Z] Session [df76ca70-05d4-11e8-912e-fb9f5a401985] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:30:00.042Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - stack:
+[ERROR - 2018-01-30T15:47:31.966Z] Session [df76ca70-05d4-11e8-912e-fb9f5a401985] - page.onError - stack:
   changeSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:64)
   genSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:53)
   genSelect (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:27)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:31:52.480Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:31:52.480Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - stack:
-  changeSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:64)
-  genSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:53)
-  genSelect (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:27)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:31:53.017Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:31:53.017Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - stack:
-  changeSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:64)
-  genSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:53)
-  genSelect (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:27)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:33:24.330Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:33:24.330Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - stack:
-  changeSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:64)
-  genSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:53)
-  genSelect (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:27)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:33:50.081Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:33:50.081Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - stack:
-  changeSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:64)
-  genSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:53)
-  genSelect (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:27)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:34:28.699Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:34:28.699Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - stack:
-  changeSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:64)
-  genSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:53)
-  genSelect (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:27)
-
-  phantomjs://platform/console++.js:263 in error
-[INFO  - 2018-01-24T16:34:54.878Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[ERROR - 2018-01-24T16:35:57.033Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:35:57.034Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - stack:
-  changeSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:64)
-  genSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:53)
-  genSelect (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:27)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:37:27.431Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:37:27.431Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - stack:
-  changeSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:64)
-  genSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:53)
-  genSelect (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:27)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:37:28.113Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:37:28.113Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - stack:
-  changeSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:64)
-  genSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:53)
-  genSelect (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:27)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:37:28.727Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:37:28.727Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - stack:
-  changeSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:64)
-  genSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:53)
-  genSelect (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:27)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:37:29.460Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - msg: TypeError: undefined is not an object (evaluating 'document.F.subI')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2018-01-24T16:37:29.460Z] Session [d041daa0-0123-11e8-b1e4-39a3544e2304] - page.onError - stack:
-  changeSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:64)
-  genSelect2 (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:53)
-  genSelect (http://jdata.yuanta.com.tw/z/js/IndustryListNewJS.djjs:27)
-
-  phantomjs://platform/console++.js:263 in error
-[INFO  - 2018-01-24T16:39:54.917Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2018-01-24T16:44:54.926Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2018-01-24T16:49:54.995Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW

@@ -20,4 +20,4 @@ class ConfigLoader(object):
 
 	def get_config(self, cfg_session, cfg_option):
 		return self.configParser.get(cfg_session, cfg_option)
-		
+

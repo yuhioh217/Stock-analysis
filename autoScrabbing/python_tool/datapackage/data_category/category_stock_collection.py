@@ -11,7 +11,6 @@ import re
 if __name__ == '__main__':
 	#set phantomJS to driver
 	driver = webdriver.PhantomJS(executable_path='./bin/phantomjs')
-	
 	#category str process
 	config_fetch = CategoryConfigLoader()
 	c_arr     = config_fetch.category_array()

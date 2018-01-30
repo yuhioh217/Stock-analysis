@@ -1,9 +1,0 @@
-水泥
-
-http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_1101.tw|tse_1102.tw|tse_1103.tw|tse_1104.tw|tse_1108.tw|tse_1109.tw|tse_1110.tw|&json=1&delay=0&_=1515431465119
-
-
-食品
-
-http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_1201.tw|tse_1203.tw|tse_1210.tw|tse_1213.tw|tse_1215.tw|tse_1216.tw|tse_1217.tw|tse_1218.tw|tse_1219.tw|tse_1220.tw|tse_1225.tw|tse_1227.tw|tse_1229.tw|tse_1231.tw|tse_1232.tw|tse_1233.tw|tse_1234.tw|tse_1235.tw|tse_1236.tw|tse_1256.tw|tse_1702.tw|tse_1737.tw|&json=1&delay=0&_=1515431637882
-

@@ -35,8 +35,8 @@ class MongoController():
 	def closeDB(self):
 		self.mongo.close()
 
-	def findAll(self, query):
-		return self.collection.find(query)
+	def findAll(self, *query):
+		return self.collection.find(*query)
 
 	def updateData(self, query, update):
 		return self.collection.update(
