@@ -1,49 +1,32 @@
-Koa2-Vue-Stock-App
+2018_0131_TASK_sprint1
 
 =================
 
-Stock Analysis by KE Jiang
-
-Features
+Change Log
 -
 
-* Use koa2/Vue/Webpack and muse-ui/moment.
+* all_stock_collection.py => all stock info getting from API and save in Mongodb (db,collecion) => (industry,stock)
+* category_stock_collection.py => category, child items and its stocks (a machine only do it once) 
+* history_stock_collection => from 2015/1 to 2018/1 each stock history data fetch (now center market finish)
+* update_date_field => change year from format 20180131 to 1070131 ROC date format.
 
-Howto
--
-
-Need to install the webpack and electron first(npm install -g).
-
-'npm install' to install the dependencies.
-'npm run build' to build the bundle.js.
-'npm run start' to run the koa2 service with nodemon.
-
-## Project Structure
+## Python Tool Project Structure
 ```
 .
-├── bin               // Start the app.js with babel.
-├── routes            // Server API Routings.
-├── src               // Theme system with React.
-│   ├── externals     // CSS/JS files from third-party.
-│   ├── images        // image files.
-│   └── js            // Javascript files.
-│   └── css           // CSS files.
-│   └── components    // vue components
-└── views             // Theme templates of page(html/jade).
+├── all_stock_collection.py
+├── category_stock_collection.py
+├── history_stock_collection.py
+├── update_date_field.py
+├── lib
+│   ├── ConfigLoader   #config loading task
+│   ├── DataAnalyze    #data analyze process
+│   ├── FetchPageData  #Fetch Data from API or webpag
+│   ├── MongoDatabase  #MongoDB contorller
+│   ├── StockLoader    #Stock info get and save/update to mongoDB
+│   └── StockIdLoader  #Stock Array collect
+│   
+└── config
 ```
-
-## Node modules
-* [babel](https://babeljs.io/) Use Async/Await and other stable ES7 features
-  * babel-core >>For Test functions
-  * babel-polyfill >>Help Mocha to run js written in babel
-  * babel-preset-es2015 >>ES6 features
-  * babel-preset-stage-3 >>Stable ES7 features(Async/Await)
-* [Koa](http://koajs.com/)
-  * koa-bodyparser
-  * koa-convert >>Use legacy middlewares from koa
-  * koa-logger >>Development routes action logger
-  * koa-router
-* [nodemon](http://nodemon.io/) >> Automatically reload changes
 
 License
 -
